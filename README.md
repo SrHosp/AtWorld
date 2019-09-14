@@ -11,3 +11,6 @@ Lo único que no he podido hacer de mi idea inicial era parsear el feed de los w
 ## Cómo probar la aplicación
 
 Es tan simple como hacerme llegar vuestro correo de Google y os añado como testers de la aplicación. Tiene iumplementadas 3 preguntas dado que únicamente es una prueba de concepto para entender los flujos de las google Actions.
+
+## Ejemplo de flujo
+![Flujo Google Actions de atSowrld](https://i.imgur.com/p5GdWYC.png)
