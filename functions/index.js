@@ -3,10 +3,10 @@ function wantContinue(conv) {
 	var name = conv.user.storage.userName;
 	
 	if (name) {
-		conv.ask(`¿Quieres seguir preguntándome ${name}?`);
+		conv.ask(`\n¿Quieres seguir preguntándome ${name}?`);
 		conv.ask(suggestions);
 	} else {
-		conv.ask('¿Quieres seguir preguntándome?');
+		conv.ask('\n¿Quieres seguir preguntándome?');
 		conv.ask(suggestions);
 	}
 }
@@ -139,13 +139,12 @@ app.intent('Webinars', (conv, {any}) => {
 					if(output) {
 						conv.ask(`Los webinars programados son:\n${output}`);
 					} else {
-						conv.ask("Parece que no hay ningún webinar programado.\n");
+						conv.ask("Parece que no hay ningún webinar programado.");
 					}
 				});
 
 			}).on("error", (err) => {
 				console.log("Error: " + err.message);
-				conv.ask("Funconalidad no implementada pero sí programada, requiere pago en firebase :(");
 			});
 		})();
 	} catch (err) {
@@ -153,6 +152,7 @@ app.intent('Webinars', (conv, {any}) => {
 		conv.close(output);
 	}
 	
+	conv.ask("Funcionalidad no implementada pero sí programada, requiere pago en firebase :(");
 	wantContinue(conv);
 });
 
